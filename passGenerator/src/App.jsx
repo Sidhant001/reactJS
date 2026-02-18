@@ -15,9 +15,11 @@ const passGenerator = useCallback(()=>{
      str+= "!@#$%^&*()_+{}:<>?,./;[]-="
    }
    for (let i = 0; i < length; i++) {
-    let char =Math.floor(Math.random()*str.length +1)
+    let char =Math.floor(Math.random()*str.length)
     pass += str.charAt(char)
-   }setPassword(pass)
+   }
+   
+   setPassword(pass)
    
 },[length,numberAllowed,charAllowed,setPassword])
 const[copied,setCopied]=useState(false)
